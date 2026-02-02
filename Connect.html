@@ -5,11 +5,184 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Connect with Mario Chong Loo - Get in Touch" />
   <title>Connect - Mario Chong Loo</title>
-  <link rel="stylesheet" type="text/css" href="connect.css" />
+  <link rel="stylesheet" type="text/css" href="./connect.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Fallback styles for GitHub Pages -->
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+      background: #121212;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+    
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(18, 18, 18, 0.95);
+      z-index: 1000;
+      padding: 1rem 2rem;
+    }
+    
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo {
+      width: 120px;
+      height: auto;
+    }
+    
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .nav-link {
+      text-decoration: none;
+      color: #ffffff;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    .nav-link.active {
+      color: #00fff7;
+    }
+    
+    .hero {
+      min-height: 60vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 6rem 2rem 4rem;
+      background: linear-gradient(rgba(18, 18, 18, 0.9), rgba(18, 18, 18, 0.95)),
+                  url('./background.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+    
+    .page-title {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 800;
+      background: linear-gradient(135deg, #ff3cac 0%, #8b5cf6 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+    }
+    
+    .hero-subtitle {
+      font-size: 1.3rem;
+      color: #b3b3b3;
+      margin-bottom: 2rem;
+    }
+    
+    section {
+      padding: 5rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    
+    .contact-card {
+      background: rgba(30, 30, 30, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 2.5rem 2rem;
+      text-align: center;
+      transition: all 0.4s ease;
+    }
+    
+    .contact-card:hover {
+      transform: translateY(-15px);
+      border-color: #00fff7;
+    }
+    
+    .contact-icon {
+      width: 70px;
+      height: 70px;
+      margin: 0 auto 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #00fff7 0%, #0099cc 100%);
+      border-radius: 50%;
+      font-size: 1.8rem;
+      color: #121212;
+    }
+    
+    .contact-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.8rem 1.5rem;
+      background: rgba(0, 255, 247, 0.1);
+      color: #00fff7;
+      text-decoration: none;
+      border-radius: 25px;
+      border: 2px solid #00fff7;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+    
+    .contact-btn:hover {
+      background: #00fff7;
+      color: #121212;
+    }
+    
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 4px;
+    }
+    
+    .hamburger span {
+      width: 25px;
+      height: 3px;
+      background: #00fff7;
+      transition: all 0.3s ease;
+      border-radius: 2px;
+    }
+    
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+      
+      .hamburger {
+        display: flex;
+      }
+      
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 
 <body class="dark-theme">
@@ -18,7 +191,7 @@
     <nav class="navbar">
       <div class="nav-container">
         <a href="index.html" class="logo-link">
-          <img src="logo_transparent.png" class="logo" alt="Mario Chong Loo Logo" />
+          <img src="./logo_transparent.png" class="logo" alt="Mario Chong Loo Logo" />
         </a>
         <ul class="nav-links">
           <li><a href="index.html" class="nav-link">Home</a></li>
@@ -181,6 +354,6 @@
     </div>
   </div>
 
-  <script src="connect.js"></script>
+  <script src="./connect.js"></script>
 </body>
 </html>
