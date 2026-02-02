@@ -2,24 +2,185 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Connect</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Connect with Mario Chong Loo - Get in Touch" />
+  <title>Connect - Mario Chong Loo</title>
   <link rel="stylesheet" type="text/css" href="connect.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body class="dark-theme">
 
-  <div class="banner">
-    <div class="navbar">
-      <img src="logo_transparent.png" class="logo" alt="Logo" />
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="mailto:mariochong113@gmail.com">Email</a></li>
-        <li><a href="https://www.linkedin.com/in/mario-chong-a187ab17a" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-        <li><a href="https://github.com/myceey69" target="_blank" rel="noopener noreferrer">Github</a></li>
-        <li><a href="tel:+16262628349">Cell</a></li>
-      </ul>
+  <header class="hero">
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="logo-link">
+          <img src="logo_transparent.png" class="logo" alt="Mario Chong Loo Logo" />
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="index.html#about" class="nav-link">About</a></li>
+          <li><a href="index.html#skills" class="nav-link">Skills</a></li>
+          <li><a href="index.html#hobbies" class="nav-link">Hobbies</a></li>
+          <li><a href="Connect.html" class="nav-link active">Connect</a></li>
+        </ul>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1 class="page-title">Let's Connect</h1>
+        <p class="hero-subtitle">I'm always excited to meet new people and explore opportunities</p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="contact-section">
+      <div class="section-header">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="divider"></div>
+        <p class="section-description">
+          Feel free to reach out through any of the following channels. I'm open to collaborations, 
+          job opportunities, or just a friendly conversation about technology and innovation.
+        </p>
+      </div>
+      
+      <div class="contact-grid">
+        <div class="contact-card" data-contact="email">
+          <div class="contact-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <h3>Email</h3>
+          <p>mariochong113@gmail.com</p>
+          <a href="mailto:mariochong113@gmail.com" class="contact-btn">
+            <i class="fas fa-paper-plane"></i> Send Email
+          </a>
+        </div>
+        
+        <div class="contact-card" data-contact="linkedin">
+          <div class="contact-icon">
+            <i class="fab fa-linkedin"></i>
+          </div>
+          <h3>LinkedIn</h3>
+          <p>Let's connect professionally</p>
+          <a href="https://www.linkedin.com/in/mario-chong-a187ab17a" target="_blank" rel="noopener noreferrer" class="contact-btn">
+            <i class="fas fa-external-link-alt"></i> Visit Profile
+          </a>
+        </div>
+        
+        <div class="contact-card" data-contact="github">
+          <div class="contact-icon">
+            <i class="fab fa-github"></i>
+          </div>
+          <h3>GitHub</h3>
+          <p>Check out my projects</p>
+          <a href="https://github.com/myceey69" target="_blank" rel="noopener noreferrer" class="contact-btn">
+            <i class="fas fa-code-branch"></i> View Repositories
+          </a>
+        </div>
+        
+        <div class="contact-card" data-contact="phone">
+          <div class="contact-icon">
+            <i class="fas fa-phone"></i>
+          </div>
+          <h3>Phone</h3>
+          <p>+1 (626) 262-8349</p>
+          <a href="tel:+16262628349" class="contact-btn">
+            <i class="fas fa-phone-alt"></i> Call Now
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="message-section">
+      <div class="section-header">
+        <h2 class="section-title">Send a Message</h2>
+        <div class="divider"></div>
+      </div>
+      
+      <div class="contact-form-container">
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" required placeholder="John Doe">
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" required placeholder="john@example.com">
+          </div>
+          
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" required placeholder="Let's collaborate!">
+          </div>
+          
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required placeholder="I'd love to hear from you..."></textarea>
+          </div>
+          
+          <button type="submit" class="submit-btn">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </button>
+        </form>
+        
+        <div class="form-info">
+          <div class="info-card">
+            <i class="fas fa-clock"></i>
+            <h4>Response Time</h4>
+            <p>I typically respond within 24-48 hours</p>
+          </div>
+          
+          <div class="info-card">
+            <i class="fas fa-globe"></i>
+            <h4>Location</h4>
+            <p>Based in California, available for remote opportunities</p>
+          </div>
+          
+          <div class="info-card">
+            <i class="fas fa-heart"></i>
+            <h4>Open To</h4>
+            <p>Collaborations, job opportunities, and tech discussions</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; 2024 Mario Chong Loo. All rights reserved.</p>
+      <div class="footer-social">
+        <a href="https://github.com/myceey69" target="_blank" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/mario-chong-a187ab17a" target="_blank" aria-label="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="mailto:mariochong113@gmail.com" aria-label="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="notification" id="notification">
+    <div class="notification-content">
+      <i class="fas fa-check-circle"></i>
+      <span id="notificationText">Message sent successfully!</span>
     </div>
   </div>
 
+  <script src="connect.js"></script>
 </body>
 </html>
