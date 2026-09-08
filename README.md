@@ -13,7 +13,7 @@ https://myceey69.github.io/macl/
 - **Interactive Animations** - Smooth transitions and micro-interactions
 - **Glassmorphism UI** - Modern frosted glass effects
 - **Dark Theme** - Easy on the eyes with vibrant accents
-- **Contact Form** - Get in touch with me directly
+- **Collaboration Section** - Get in touch with me directly
 - **Skills Showcase** - Interactive skill cards with details
 - **Social Links** - Connect on various platforms
 
@@ -28,11 +28,8 @@ https://myceey69.github.io/macl/
 ```
 macl/
 ├── index.html          # Main portfolio page
-├── Connect.html        # Contact page
 ├── index.css           # Main styles
-├── connect.css         # Contact page styles
 ├── script.js           # Main JavaScript
-├── connect.js          # Contact page JavaScript
 ├── background.jpg      # Background image
 ├── logo_transparent.png # Logo
 ├── pfp.jpg            # Profile picture
@@ -68,6 +65,7 @@ If styles aren't loading on GitHub Pages:
 
 ## 📧 Contact
 - **Email**: mariochong113@gmail.com
+- **Phone**: +1 (626) 262-8349
 - **LinkedIn**: [Mario Chong](https://www.linkedin.com/in/mario-chong-a187ab17a)
 - **GitHub**: [myceey69](https://github.com/myceey69)
 

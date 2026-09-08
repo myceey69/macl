@@ -3,372 +3,437 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Mario Chong Loo - Personal Portfolio Website" />
-  <title>Mario Chong Loo - Portfolio</title>
+  <meta name="description" content="Mario Chong Loo - Computer Science portfolio focused on AI tools, public-sector web systems, and data-heavy engineering workflows." />
+  <title>Mario Chong Loo - Software Engineering Portfolio</title>
+  <link rel="icon" type="image/png" href="./logo_transparent.png" />
   <link rel="stylesheet" type="text/css" href="./index.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
-  <!-- Fallback styles for GitHub Pages -->
-  <style>
-    /* Basic fallback styles */
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Inter', sans-serif;
-      background: #121212;
-      color: #ffffff;
-      line-height: 1.6;
-    }
-    
-    .navbar {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: rgba(18, 18, 18, 0.95);
-      z-index: 1000;
-      padding: 1rem 2rem;
-    }
-    
-    .nav-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    
-    .logo {
-      width: 120px;
-      height: auto;
-    }
-    
-    .nav-links {
-      display: flex;
-      list-style: none;
-      gap: 2rem;
-      margin: 0;
-      padding: 0;
-    }
-    
-    .nav-link {
-      text-decoration: none;
-      color: #ffffff;
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-    
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 6rem 2rem 4rem;
-      background: linear-gradient(rgba(18, 18, 18, 0.9), rgba(18, 18, 18, 0.95)),
-                  url('./background.jpg');
-      background-size: cover;
-      background-position: center;
-    }
-    
-    .hero-content {
-      max-width: 1200px;
-      width: 100%;
-    }
-    
-    .highlight {
-      margin-bottom: 1.5rem;
-    }
-    
-    .greeting {
-      display: block;
-      font-size: 1.2rem;
-      color: #b3b3b3;
-      margin-bottom: 0.5rem;
-    }
-    
-    .name {
-      display: block;
-      font-size: clamp(2.5rem, 5vw, 4rem);
-      font-weight: 800;
-      background: linear-gradient(135deg, #ff3cac 0%, #8b5cf6 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      line-height: 1.1;
-    }
-    
-    .hero-subtitle {
-      font-size: 1.3rem;
-      color: #b3b3b3;
-      margin-bottom: 2rem;
-    }
-    
-    .hero-buttons {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    
-    .btn {
-      padding: 1rem 2rem;
-      text-decoration: none;
-      font-weight: 600;
-      border-radius: 50px;
-      transition: all 0.3s ease;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-size: 1rem;
-    }
-    
-    .primary {
-      background: linear-gradient(135deg, #00fff7 0%, #0099cc 100%);
-      color: #121212;
-      border: none;
-    }
-    
-    .outline {
-      background: transparent;
-      color: #00fff7;
-      border: 2px solid #00fff7;
-    }
-    
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
-      gap: 4px;
-    }
-    
-    .hamburger span {
-      width: 25px;
-      height: 3px;
-      background: #00fff7;
-      transition: all 0.3s ease;
-      border-radius: 2px;
-    }
-    
-    @media (max-width: 768px) {
-      .nav-links {
-        display: none;
-      }
-      
-      .hamburger {
-        display: flex;
-      }
-      
-      .hero-content {
-        text-align: center;
-      }
-    }
-  </style>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 </head>
 <body class="dark-theme">
-
-  <header class="hero">
-    <nav class="navbar">
-      <div class="nav-container">
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#home" class="logo-link" aria-label="Mario Chong Loo home">
         <img src="./logo_transparent.png" class="logo" alt="Mario Chong Loo Logo" />
-        <ul class="nav-links">
-          <li><a href="#home" class="nav-link">Home</a></li>
-          <li><a href="#about" class="nav-link">About</a></li>
-          <li><a href="#skills" class="nav-link">Skills</a></li>
-          <li><a href="#hobbies" class="nav-link">Hobbies</a></li>
-          <li><a href="Connect.html" class="nav-link">Connect</a></li>
-        </ul>
-        <div class="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </div>
-    </nav>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#home" class="nav-link">Work</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#collaborate" class="nav-link">Contact</a></li>
+      </ul>
+      <button class="hamburger" type="button" aria-label="Open navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
 
-    <div class="hero-content" id="home">
+  <header class="hero" id="home">
+    <div class="hero-content">
       <div class="hero-text">
-        <h1 class="highlight">
-          <span class="greeting">Hello, I'm</span>
-          <span class="name">Mario Chong Loo</span>
-        </h1>
-        <p class="hero-subtitle">Passionate Technologist & Marathon Runner</p>
+        <p class="eyebrow">Computer Science at Cal Poly Pomona</p>
+        <h1>Mario Chong Loo</h1>
+        <p class="hero-subtitle">
+          I build AI-assisted tools, public-sector web systems, and data-heavy engineering workflows that turn messy technical problems into usable products.
+        </p>
         <div class="hero-buttons">
-          <a href="https://github.com/myceey69?tab=repositories" class="btn primary" target="_blank">
-            <i class="fab fa-github"></i> View Projects
+          <a href="#projects" class="btn primary">
+            <i class="fas fa-diagram-project"></i> Featured Work
           </a>
           <a href="./RESUME.pdf" target="_blank" class="btn outline">
-            <i class="fas fa-file-pdf"></i> View Resume
+            <i class="fas fa-file-pdf"></i> Resume
           </a>
+          <a href="https://github.com/myceey69" target="_blank" rel="noopener noreferrer" class="btn ghost">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+		   <a href="https://www.linkedin.com/in/machongl" target="_blank" rel="noopener noreferrer"  class="btn ghost">
+              <i class="fab fa-linkedin"></i> Linkedin
+            </a>
         </div>
       </div>
-      <div class="hero-image">
-        <img src="./pfp.jpg" alt="Profile Picture" class="profile-pic-animated" />
+
+      <div class="hero-visual" aria-label="Temporary 3D character preview">
+        <model-viewer
+          src="https://raw.githubusercontent.com/myceey69/macl/44844474bf6685ff9eccfc56ede52b3af39b3073/MC_3D%20(1).glb"
+		  
+          alt="Temporary spinning 3D character model"
+          auto-rotate
+          camera-controls
+          interaction-prompt="none"
+          shadow-intensity="1"
+          exposure="0.9"
+          camera-orbit="35deg 72deg 3m"
+          field-of-view="32deg">
+        </model-viewer>
+        <div class="model-note">
+          <span>Temporary GLB</span>
+          <strong>SWAP LATER</strong>
+        </div>
       </div>
     </div>
-    
-    <div class="scroll-indicator">
-      <div class="scroll-arrow"></div>
-      <span>Scroll Down</span>
+
+    <div class="metrics-strip" aria-label="Career impact metrics">
+      <div class="metric">
+        <strong>280K+</strong>
+        <span>residents served</span>
+      </div>
+      <div class="metric">
+        <strong>230K+</strong>
+        <span>students supported</span>
+      </div>
+      <div class="metric">
+        <strong>60%</strong>
+        <span>faster seismic setup</span>
+      </div>
+      <div class="metric">
+        <strong>80%</strong>
+        <span>engagement lift</span>
+      </div>
     </div>
   </header>
 
   <main>
-    <section class="profile-section" id="about">
+    <section class="projects-section" id="projects">
       <div class="section-header">
-        <h2 class="section-title">About Me</h2>
-        <div class="divider"></div>
+        <p class="eyebrow">Selected case studies</p>
+        <h2 class="section-title">Projects With Evidence</h2>
+        <p class="section-description">
+          Recruiters should not have to reverse-engineer impact from a repository list. These are the projects and systems I would want them to see first.
+        </p>
       </div>
-      
-      <div class="about-content">
-        <div class="about-text">
-          <blockquote class="quote">
-            <i class="fas fa-quote-left"></i>
-            It is never too late to be what you might have been.
-            <i class="fas fa-quote-right"></i>
-          </blockquote>
-          
-          <div class="bio-text">
-            <p>
-              My name is Mario Chong Loo, and I was born in a small country that I proudly
-              call home, Panama. I grew up without a father and was raised by the most loving
-              mother in the world. I came to the United States when I was 16 to pursue a better education and career.
-            </p>
-            <p>
-              I am a passionate and driven individual pursuing a career in technology. I
-              strive to grow personally and professionally through continuous learning,
-              hands-on projects, and meaningful connections.
-            </p>
+
+      <div class="project-grid">
+        <article class="project-card featured">
+          <div class="project-topline">
+            <span class="project-type">Data Tooling</span>
+            <i class="fas fa-wave-square"></i>
           </div>
-          
-          <div class="social-links">
-            <a href="https://github.com/myceey69" target="_blank" class="social-link" aria-label="GitHub">
-              <i class="fab fa-github"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/mario-chong-a187ab17a" target="_blank" class="social-link" aria-label="LinkedIn">
-              <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="mailto:mariochong113@gmail.com" class="social-link" aria-label="Email">
-              <i class="fas fa-envelope"></i>
-            </a>
-            <a href="tel:+16262628349" class="social-link" aria-label="Phone">
-              <i class="fas fa-phone"></i>
-            </a>
+          <h3>Seismic Analysis Automation Tool</h3>
+          <p>
+            Built a Python Tkinter workflow for seismic data configuration, retrieval, LLM-assisted technical help, and waveform visualization.
+          </p>
+          <div class="proof-points">
+            <span>60% faster data prep</span>
+            <span>Thousands of waveforms</span>
+            <span>SCEC Annual Meeting</span>
           </div>
-        </div>
+          <div class="tech-stack">
+            <span>Python</span>
+            <span>Tkinter</span>
+            <span>LLMs</span>
+            <span>Data Visualization</span>
+          </div>
+          <a href="https://github.com/myceey69/cybershake-tool-gui" target="_blank" rel="noopener noreferrer" class="project-link">
+            View repository <i class="fas fa-arrow-right"></i>
+          </a>
+        </article>
+
+        <article class="project-card">
+          <div class="project-topline">
+            <span class="project-type">Civic Web</span>
+            <i class="fas fa-fire-extinguisher"></i>
+          </div>
+          <h3>Post-Wildfire Rebuilding Platform</h3>
+          <p>
+            Designed tools for risk assessment, recovery mapping, water resilience, and rebuilding guidance aligned with USGBC standards.
+          </p>
+          <div class="proof-points">
+            <span>Risk assessment tools</span>
+            <span>Recovery mapping</span>
+            <span>Resource accessibility</span>
+          </div>
+          <div class="tech-stack">
+            <span>React</span>
+            <span>JavaScript</span>
+            <span>UX/UI</span>
+            <span>Mapping</span>
+          </div>
+          <a href="https://github.com/myceey69/USGBC-" target="_blank" rel="noopener noreferrer" class="project-link">
+            View repository <i class="fas fa-arrow-right"></i>
+          </a>
+        </article>
+
+        <article class="project-card">
+          <div class="project-topline">
+            <span class="project-type">AI Product Ops</span>
+            <i class="fas fa-robot"></i>
+          </div>
+          <h3>AI Support Chatbot & Pricing Calculator</h3>
+          <p>
+            Built customer-facing automation for support intake and pricing logic, improving quote accuracy and customer response flow.
+          </p>
+          <div class="proof-points">
+            <span>80% engagement lift</span>
+            <span>Fewer manual tickets</span>
+            <span>Pricing automation</span>
+          </div>
+          <div class="tech-stack">
+            <span>AI Chatbot</span>
+            <span>Velo</span>
+            <span>JavaScript</span>
+            <span>QA</span>
+          </div>
+          <a href="#collaborate" class="project-link">
+            Ask about this work <i class="fas fa-arrow-right"></i>
+          </a>
+        </article>
+
+        <article class="project-card">
+          <div class="project-topline">
+            <span class="project-type">Public Systems</span>
+            <i class="fas fa-server"></i>
+          </div>
+          <h3>Public Sector Web Platform Support</h3>
+          <p>
+            Maintained production and staging web systems for civic and education audiences, resolving user-facing issues in Agile sprints.
+          </p>
+          <div class="proof-points">
+            <span>280K+ residents</span>
+            <span>230K+ students</span>
+            <span>100+ tickets</span>
+          </div>
+          <div class="tech-stack">
+            <span>WordPress</span>
+            <span>Drupal</span>
+            <span>Git</span>
+            <span>Production Support</span>
+          </div>
+          <a href="#collaborate" class="project-link">
+            Discuss experience <i class="fas fa-arrow-right"></i>
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <section class="experience-section" id="experience">
+      <div class="section-header">
+        <p class="eyebrow">What I have shipped</p>
+        <h2 class="section-title">Experience Snapshot</h2>
+      </div>
+
+      <div class="timeline">
+        <article class="timeline-item">
+          <span class="date">2026 - Present</span>
+          <div>
+            <h3>Software Engineer Intern - LA County Public Works</h3>
+            <p>Updating Waterworks Division web content and improving site accuracy and UI/UX for 280,000+ residents.</p>
+          </div>
+        </article>
+        <article class="timeline-item">
+          <span class="date">2025 - 2026</span>
+          <div>
+            <h3>Software Engineer Intern - California Climate Education Center</h3>
+            <p>Built a post-wildfire rebuilding platform with risk tools, recovery mapping, and resilience calculators.</p>
+          </div>
+        </article>
+        <article class="timeline-item">
+          <span class="date">2025</span>
+          <div>
+            <h3>Software Engineer Intern - Statewide California Earthquake Center</h3>
+            <p>Automated seismic analysis workflows, added LLM assistance, and presented technical work to researchers.</p>
+          </div>
+        </article>
+        <article class="timeline-item">
+          <span class="date">2024 - 2025</span>
+          <div>
+            <h3>Software Engineer Intern - Jacobs</h3>
+            <p>Supported web platforms serving 230,000+ students and resolved 100+ development tickets.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="leadership-section" id="leadership">
+      <div class="section-header">
+        <p class="eyebrow">Beyond the job title</p>
+        <h2 class="section-title">Leadership & Extracurriculars</h2>
+        <p class="section-description">
+          I lead teams, create opportunities for others to build, and bring the same communication and accountability to technical and community settings.
+        </p>
+      </div>
+
+      <div class="leadership-grid">
+        <article class="leadership-card">
+          <div class="leadership-icon"><i class="fas fa-calendar-check"></i></div>
+          <div>
+            <p class="leadership-type">Event Leadership</p>
+            <h3>HACKMESA Organizer</h3>
+            <p>Helped organize HACKMESA, a hackathon that brought participants together to build, collaborate, and learn through hands-on projects.</p>
+          </div>
+        </article>
+
+        <article class="leadership-card">
+          <div class="leadership-icon"><i class="fas fa-users"></i></div>
+          <div>
+            <p class="leadership-type">Team Leadership</p>
+            <h3>Hackathon Leader</h3>
+            <p>Led hackathon participants and supported teams as they shaped ideas, solved problems, and worked toward completed project demos.</p>
+          </div>
+        </article>
+
+        <article class="leadership-card">
+          <div class="leadership-icon"><i class="fas fa-bullhorn"></i></div>
+          <div>
+            <p class="leadership-type">Community Outreach</p>
+            <h3>Service Outreach Participant</h3>
+            <p>Participated in outreach events through my current role to promote the service and connect it with the people it is designed to support.</p>
+          </div>
+        </article>
+
+        <article class="leadership-card">
+          <div class="leadership-icon"><i class="fas fa-gavel"></i></div>
+          <div>
+            <p class="leadership-type">Technical Community</p>
+            <h3>Competition Judge</h3>
+            <p>Served as a competition judge, evaluating participant work and providing thoughtful feedback based on the goals and criteria of the event.</p>
+          </div>
+        </article>
+
+        <article class="leadership-card">
+          <div class="leadership-icon"><i class="fas fa-futbol"></i></div>
+          <div>
+            <p class="leadership-type">Athletics</p>
+            <h3>Varsity Soccer Captain</h3>
+            <p>Served as captain of my high school varsity soccer team, building teamwork, accountability, and composure in a competitive environment.</p>
+          </div>
+        </article>
       </div>
     </section>
 
     <section class="skills-section" id="skills">
       <div class="section-header">
-        <h2 class="section-title">Technical Skills</h2>
-        <div class="divider"></div>
+        <p class="eyebrow">Toolbox</p>
+        <h2 class="section-title">Skills By Use Case</h2>
       </div>
-      
+
       <div class="skills-grid">
-        <div class="skill-card" data-skill="programming">
-          <div class="skill-icon">
-            <i class="fas fa-code"></i>
-          </div>
-          <h3>Programming</h3>
+        <div class="skill-card" data-skill="systems">
+          <div class="skill-icon"><i class="fas fa-terminal"></i></div>
+          <h3>Software & Systems</h3>
           <div class="skill-tags">
-            <span class="tag">Python</span>
-            <span class="tag">JavaScript</span>
             <span class="tag">Java</span>
+            <span class="tag">Python</span>
             <span class="tag">C++</span>
+            <span class="tag">Rust</span>
+            <span class="tag">Go</span>
           </div>
         </div>
-        
-        <div class="skill-card" data-skill="web">
-          <div class="skill-icon">
-            <i class="fas fa-globe"></i>
-          </div>
-          <h3>Web Development</h3>
+
+        <div class="skill-card" data-skill="product">
+          <div class="skill-icon"><i class="fas fa-window-restore"></i></div>
+          <h3>Product Engineering</h3>
           <div class="skill-tags">
-            <span class="tag">HTML/CSS</span>
             <span class="tag">React</span>
-            <span class="tag">Node.js</span>
-            <span class="tag">Express</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">HTML/CSS</span>
+            <span class="tag">Figma</span>
+            <span class="tag">UX/UI</span>
           </div>
         </div>
-        
-        <div class="skill-card" data-skill="tools">
-          <div class="skill-icon">
-            <i class="fas fa-tools"></i>
+
+        <div class="skill-card" data-skill="ai">
+          <div class="skill-icon"><i class="fas fa-brain"></i></div>
+          <h3>AI & Data</h3>
+          <div class="skill-tags">
+            <span class="tag">LLMs</span>
+            <span class="tag">Prompt Engineering</span>
+            <span class="tag">Machine Learning</span>
+            <span class="tag">SQL</span>
+            <span class="tag">Visualization</span>
           </div>
-          <h3>Tools & Technologies</h3>
+        </div>
+
+        <div class="skill-card" data-skill="infrastructure">
+          <div class="skill-icon"><i class="fas fa-network-wired"></i></div>
+          <h3>Platforms & Infrastructure</h3>
           <div class="skill-tags">
             <span class="tag">Git</span>
             <span class="tag">Docker</span>
+            <span class="tag">Azure</span>
             <span class="tag">AWS</span>
-            <span class="tag">MongoDB</span>
+            <span class="tag">Networking</span>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="hobbies-section" id="hobbies">
+    <section class="profile-section" id="about">
       <div class="section-header">
-        <h2 class="section-title">My Hobbies</h2>
-        <div class="divider"></div>
+        <p class="eyebrow">About</p>
+        <h2 class="section-title">Builder, Learner, Runner</h2>
       </div>
-      
-      <div class="hobbies-grid">
-        <div class="hobby-card" data-hobby="running">
-          <div class="hobby-icon">
-            <i class="fas fa-running"></i>
-          </div>
-          <h3>Marathon Training</h3>
-          <p>Pushing limits and building endurance through long-distance running</p>
+
+      <div class="about-content">
+        <img src="./pfp.jpg" alt="Mario Chong Loo" class="about-photo" />
+        <div class="about-text">
+          <p>
+            I am a Computer Science student at Cal Poly Pomona with hands-on experience across civic web systems, AI tools, data visualization, and technical support. I care about building software that holds up under real users, real constraints, and real deadlines.
+          </p>
+          <p>
+            I grew up in Panama and came to the United States at 16 to pursue a stronger education and career. Outside of engineering, I train for long-distance running and enjoy poker, chess, and solving Rubik's Cubes.
+          </p>
+          
         </div>
-        
-        <div class="hobby-card" data-hobby="fitness">
-          <div class="hobby-icon">
-            <i class="fas fa-dumbbell"></i>
-          </div>
-          <h3>Fitness & Health</h3>
-          <p>Staying active and maintaining a healthy lifestyle</p>
-        </div>
-        
-        <div class="hobby-card" data-hobby="tech">
-          <div class="hobby-icon">
-            <i class="fas fa-laptop-code"></i>
-          </div>
-          <h3>Tech Exploration</h3>
-          <p>Discovering new technologies and innovative tools</p>
-        </div>
-        
-        <div class="hobby-card" data-hobby="gaming">
-          <div class="hobby-icon">
-            <i class="fas fa-gamepad"></i>
-          </div>
-          <h3>Gaming & Anime</h3>
-          <p>Enjoying interactive entertainment and storytelling</p>
-        </div>
+      </div>
+    </section>
+
+    <section class="collaborate-section" id="collaborate">
+      <div class="section-header">
+        <p class="eyebrow">Let's build something useful</p>
+        <h2 class="section-title">Collaborate With Me</h2>
+        <p class="section-description">
+          I am open to software projects, AI and data work, public-interest technology, and thoughtful conversations about engineering.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <article class="contact-card">
+          <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+          <h3>Email</h3>
+          <p>mariochong113@gmail.com</p>
+          <a class="contact-button" href="mailto:mariochong113@gmail.com">
+            <i class="fas fa-paper-plane"></i> Send Email
+          </a>
+        </article>
+
+        <article class="contact-card">
+          <div class="contact-icon"><i class="fab fa-linkedin"></i></div>
+          <h3>LinkedIn</h3>
+          <p>Let's connect professionally</p>
+          <a class="contact-button" href="https://www.linkedin.com/in/machongl" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-external-link-alt"></i> Visit Profile
+          </a>
+        </article>
+      </div>
+
+      <div class="collaboration-layout">
+        <aside class="collaboration-note">
+          <i class="fas fa-lightbulb"></i>
+          <h3>What I enjoy working on</h3>
+          <p>AI-assisted tools, civic and education platforms, data workflows, and products that make complex systems easier to use.</p>
+          <p class="response-note"><i class="fas fa-clock"></i> I typically respond within 24 hours.</p>
+        </aside>
       </div>
     </section>
   </main>
 
   <footer class="footer">
     <div class="footer-content">
-      <p>&copy; 2024 Mario Chong Loo. All rights reserved.</p>
-      <div class="footer-social">
-        <a href="https://github.com/myceey69" target="_blank" aria-label="GitHub">
-          <i class="fab fa-github"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/mario-chong-a187ab17a" target="_blank" aria-label="LinkedIn">
-          <i class="fab fa-linkedin"></i>
-        </a>
+	<div class="footer-social">
+        <strong> Mario Chong Loo </strong> 
       </div>
+      
+      <div class="footer-contact">
+        <p>mariochong113@gmail.com · 1 (626) 262-8349</p>
+      </div>
+	   <p>&copy; 2026. Built from scratch.</p>
     </div>
   </footer>
 
   <script src="./script.js"></script>
 </body>
 </html>
-
-
