@@ -8,6 +8,7 @@ function closeMenu() {
   navLinks.classList.remove('active');
   hamburger.setAttribute('aria-expanded', 'false');
   document.body.classList.remove('nav-open');
+  navbar.classList.remove('nav-hidden');
 }
 
 hamburger.addEventListener('click', () => {
@@ -15,6 +16,7 @@ hamburger.addEventListener('click', () => {
   navLinks.classList.toggle('active', isOpen);
   hamburger.setAttribute('aria-expanded', String(isOpen));
   document.body.classList.toggle('nav-open', isOpen);
+  navbar.classList.remove('nav-hidden');
 });
 
 navLinkItems.forEach((link) => {
@@ -34,8 +36,23 @@ navLinkItems.forEach((link) => {
   });
 });
 
+let lastScrollY = window.scrollY;
+
 function updateNavbarState() {
-  navbar.classList.toggle('scrolled', window.scrollY > 24);
+  const currentScrollY = window.scrollY;
+  const scrollDelta = currentScrollY - lastScrollY;
+
+  navbar.classList.toggle('scrolled', currentScrollY > 24);
+
+  if (currentScrollY <= 24 || document.body.classList.contains('nav-open')) {
+    navbar.classList.remove('nav-hidden');
+  } else if (scrollDelta > 4) {
+    navbar.classList.add('nav-hidden');
+  } else if (scrollDelta < -4) {
+    navbar.classList.remove('nav-hidden');
+  }
+
+  lastScrollY = currentScrollY;
 }
 
 window.addEventListener('scroll', updateNavbarState, { passive: true });
