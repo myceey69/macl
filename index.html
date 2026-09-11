@@ -24,11 +24,17 @@
         <li><a href="#about" class="nav-link">About</a></li>
         <li><a href="#collaborate" class="nav-link">Contact</a></li>
       </ul>
-      <button class="hamburger" type="button" aria-label="Open navigation menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+      <div class="nav-actions">
+        <button class="theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="false">
+          <i class="fas fa-sun" aria-hidden="true"></i>
+          <span class="theme-toggle-label">Light</span>
+        </button>
+        <button class="hamburger" type="button" aria-label="Open navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </div>
   </nav>
 
@@ -310,54 +316,104 @@
         <h2 class="section-title">Skills By Use Case</h2>
       </div>
 
-      <div class="skills-grid">
-        <div class="skill-card" data-skill="systems">
-          <div class="skill-icon"><i class="fas fa-terminal"></i></div>
-          <h3>Software & Systems</h3>
-          <div class="skill-tags">
-            <span class="tag">Java</span>
-            <span class="tag">Python</span>
-            <span class="tag">C++</span>
-            <span class="tag">Rust</span>
-            <span class="tag">Go</span>
+      <div class="skills-layout">
+        <div class="skills-grid">
+          <div class="skill-card" data-skill="systems">
+            <div class="skill-icon"><i class="fas fa-terminal"></i></div>
+            <h3>Software & Systems</h3>
+            <div class="skill-tags">
+              <span class="tag">Java</span>
+              <span class="tag">Python</span>
+              <span class="tag">C++</span>
+              <span class="tag">Rust</span>
+              <span class="tag">Go</span>
+            </div>
+          </div>
+
+          <div class="skill-card" data-skill="product">
+            <div class="skill-icon"><i class="fas fa-window-restore"></i></div>
+            <h3>Product Engineering</h3>
+            <div class="skill-tags">
+              <span class="tag">React</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">HTML/CSS</span>
+              <span class="tag">Figma</span>
+              <span class="tag">UX/UI</span>
+            </div>
+          </div>
+
+          <div class="skill-card" data-skill="ai">
+            <div class="skill-icon"><i class="fas fa-brain"></i></div>
+            <h3>AI & Data</h3>
+            <div class="skill-tags">
+              <span class="tag">LLMs</span>
+              <span class="tag">Prompt Engineering</span>
+              <span class="tag">Machine Learning</span>
+              <span class="tag">SQL</span>
+              <span class="tag">Visualization</span>
+            </div>
+          </div>
+
+          <div class="skill-card" data-skill="infrastructure">
+            <div class="skill-icon"><i class="fas fa-network-wired"></i></div>
+            <h3>Platforms & Infrastructure</h3>
+            <div class="skill-tags">
+              <span class="tag">Git</span>
+              <span class="tag">Docker</span>
+              <span class="tag">Azure</span>
+              <span class="tag">AWS</span>
+              <span class="tag">Networking</span>
+            </div>
           </div>
         </div>
 
-        <div class="skill-card" data-skill="product">
-          <div class="skill-icon"><i class="fas fa-window-restore"></i></div>
-          <h3>Product Engineering</h3>
-          <div class="skill-tags">
-            <span class="tag">React</span>
-            <span class="tag">TypeScript</span>
-            <span class="tag">HTML/CSS</span>
-            <span class="tag">Figma</span>
-            <span class="tag">UX/UI</span>
+        <aside class="skill-stats" aria-labelledby="skill-stats-title">
+          <div class="skill-stats-header">
+            <div>
+              <p class="skill-stats-kicker">Player profile</p>
+              <h3 id="skill-stats-title">Core Stats</h3>
+            </div>
+            <i class="fas fa-chart-area" aria-hidden="true"></i>
           </div>
-        </div>
 
-        <div class="skill-card" data-skill="ai">
-          <div class="skill-icon"><i class="fas fa-brain"></i></div>
-          <h3>AI & Data</h3>
-          <div class="skill-tags">
-            <span class="tag">LLMs</span>
-            <span class="tag">Prompt Engineering</span>
-            <span class="tag">Machine Learning</span>
-            <span class="tag">SQL</span>
-            <span class="tag">Visualization</span>
+          <div class="radar-chart">
+            <svg viewBox="0 0 360 340" role="img" aria-labelledby="radar-title radar-description">
+              <title id="radar-title">Core engineering skill profile</title>
+              <desc id="radar-description">A radar chart showing strong systems, product, data, infrastructure, and communication abilities.</desc>
+              <g class="radar-grid">
+                <polygon points="180,32 320,134 267,300 93,300 40,134"></polygon>
+                <polygon points="180,71 279,143 241,260 119,260 81,143"></polygon>
+                <polygon points="180,110 238,152 215,220 145,220 122,152"></polygon>
+                <polygon points="180,149 198,162 188,180 172,180 162,162"></polygon>
+                <line x1="180" y1="166" x2="180" y2="32"></line>
+                <line x1="180" y1="166" x2="320" y2="134"></line>
+                <line x1="180" y1="166" x2="267" y2="300"></line>
+                <line x1="180" y1="166" x2="93" y2="300"></line>
+                <line x1="180" y1="166" x2="40" y2="134"></line>
+              </g>
+              <polygon class="radar-value" points="180,54 288,141 251,276 105,281 65,140"></polygon>
+              <g class="radar-points">
+                <circle cx="180" cy="54" r="4"></circle>
+                <circle cx="288" cy="141" r="4"></circle>
+                <circle cx="251" cy="276" r="4"></circle>
+                <circle cx="105" cy="281" r="4"></circle>
+                <circle cx="65" cy="140" r="4"></circle>
+              </g>
+              <g class="radar-labels">
+                <text x="180" y="18" text-anchor="middle">SYSTEMS</text>
+                <text x="333" y="132" text-anchor="start">PRODUCT</text>
+                <text x="279" y="318" text-anchor="middle">DATA</text>
+                <text x="81" y="318" text-anchor="middle">INFRA</text>
+                <text x="27" y="132" text-anchor="end">PEOPLE</text>
+              </g>
+            </svg>
           </div>
-        </div>
 
-        <div class="skill-card" data-skill="infrastructure">
-          <div class="skill-icon"><i class="fas fa-network-wired"></i></div>
-          <h3>Platforms & Infrastructure</h3>
-          <div class="skill-tags">
-            <span class="tag">Git</span>
-            <span class="tag">Docker</span>
-            <span class="tag">Azure</span>
-            <span class="tag">AWS</span>
-            <span class="tag">Networking</span>
+          <div class="skill-stats-footer">
+            <span><i class="fas fa-circle" aria-hidden="true"></i> Strength profile</span>
+            <strong>BUILD / LEARN / SHIP</strong>
           </div>
-        </div>
+        </aside>
       </div>
     </section>
 

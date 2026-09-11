@@ -2,6 +2,27 @@ const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
 const navLinkItems = document.querySelectorAll('.nav-link');
 const navbar = document.querySelector('.navbar');
+const themeToggle = document.querySelector('.theme-toggle');
+const themeToggleIcon = themeToggle.querySelector('i');
+const themeToggleLabel = themeToggle.querySelector('.theme-toggle-label');
+
+function updateThemeToggle(isLightMode) {
+  document.body.classList.toggle('light-theme', isLightMode);
+  document.body.classList.toggle('dark-theme', !isLightMode);
+  themeToggle.setAttribute('aria-pressed', String(isLightMode));
+  themeToggle.setAttribute('aria-label', isLightMode ? 'Switch to dark mode' : 'Switch to light mode');
+  themeToggleIcon.className = isLightMode ? 'fas fa-moon' : 'fas fa-sun';
+  themeToggleLabel.textContent = isLightMode ? 'Dark' : 'Light';
+}
+
+const savedTheme = localStorage.getItem('portfolio-theme');
+updateThemeToggle(savedTheme === 'light');
+
+themeToggle.addEventListener('click', () => {
+  const isLightMode = !document.body.classList.contains('light-theme');
+  updateThemeToggle(isLightMode);
+  localStorage.setItem('portfolio-theme', isLightMode ? 'light' : 'dark');
+});
 
 function closeMenu() {
   hamburger.classList.remove('active');
